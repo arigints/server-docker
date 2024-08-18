@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   filebrowser:
     image: filebrowser/filebrowser:latest
@@ -8,7 +6,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - $HOME/docker-prod/filebrowser/data:/srv
-      - $HOME/docker-prod/filebrowser/filebrowser.db:/database.db
-      - $HOME/docker-prod/filebrowser/filebrowser.json:/.filebrowser.json
+      - /data/filebrowser/data:/srv
+      - ./filebrowser.db:/database.db
+      - ./filebrowser.json:/.filebrowser.json
     #user: 1000:1000
