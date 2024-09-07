@@ -1,0 +1,29 @@
+services:
+  yourls:
+    # replace "image" with "build" for developing purpose
+    # build: ./Dockerfile
+    #
+    # or even more integrated with theme Sleeky
+    # image: guessi/docker-yourls:1.9.2-theme
+    #
+    # or with "x.y.z-noadmin" for production environment
+    # image: guessi/docker-yourls:1.9.2-noadmin
+    image: guessi/docker-yourls:1.9.2-theme
+
+    env_file:
+      - env.yourls
+    ports:
+      - 80:80
+    depends_on:
+      - mysql
+    logging:
+      driver: json-file
+      options:
+        max-size: 20m
+        max-file: "30"
+    networks:
+      - my_shared_network
+
+networks:
+  my_shared_network:
+    external: true

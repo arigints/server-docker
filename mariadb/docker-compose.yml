@@ -1,0 +1,18 @@
+services:
+  mariadb:
+    image: mariadb:latest
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "3306:3306"
+    volumes:
+      - /data/docker/mariadb:/var/lib/mysql
+      - ./init.sql:/data/application/init.sql
+    command: "--init-file /data/application/init.sql"
+    networks:
+      - my_shared_network
+
+networks:
+  my_shared_network:
+    external: true
