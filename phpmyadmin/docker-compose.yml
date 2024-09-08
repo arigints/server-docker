@@ -1,0 +1,14 @@
+services:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: mariadb
+    ports:
+      - "8080:80"
+    networks:
+      - my_shared_network
+
+networks:
+  my_shared_network:
+    external: true
