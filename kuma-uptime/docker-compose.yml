@@ -1,0 +1,14 @@
+services:
+  uptime-kuma:
+    container_name: uptime-kuma
+    image: louislam/uptime-kuma:1
+    volumes:
+      - ./data/docker/uptime-kuma:/app/data
+    ports:
+      - "3001:3001"
+    networks:
+      - my_shared_network
+
+networks:
+  my_shared_network:
+    external: true
