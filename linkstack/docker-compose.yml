@@ -1,0 +1,25 @@
+services:
+  linkstack:
+    hostname: 'linkstack'
+    image: 'linkstackorg/linkstack:amd64'
+    environment:
+      TZ: 'Asia/Jakarta'
+      SERVER_ADMIN: 'gintingari73@gmail.com'
+      HTTP_SERVER_NAME: 'link.arigints.my.id'
+      HTTPS_SERVER_NAME: 'link.arigints.my.id'
+      LOG_LEVEL: 'info'
+      PHP_MEMORY_LIMIT: '256M'
+      UPLOAD_MAX_FILESIZE: '8M'
+    volumes:
+      - /data/docker/linkstack:/htdocs
+    ports:
+      - '8002:80'
+      - '8081:443'
+    restart: unless-stopped
+    user: root
+    networks:
+      - my_shared_network
+
+networks:
+  my_shared_network:
+    external: true

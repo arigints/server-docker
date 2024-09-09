@@ -1,0 +1,31 @@
+services:
+  redis:
+    image: redis
+    restart: always
+    command: redis-server --requirepass 123
+    networks:
+      - my_shared_network
+
+  app:
+    image: nextcloud:stable
+    restart: always
+    ports:
+      - 8000:80
+    links:
+      - redis
+    volumes:
+      - /data/docker/nextcloud/config:/var/www/html/config
+      - /data/docker/nextcloud/data:/var/www/html/data
+    environment:
+      - MYSQL_HOST=10.10.10.11:3306
+      - REDIS_HOST_PASSWORD=123
+    env_file:
+      - .env
+    depends_on:
+      - redis
+    networks:
+      - my_shared_network
+
+networks:
+  my_shared_network:
+    external: true
