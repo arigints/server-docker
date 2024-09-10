@@ -11,8 +11,7 @@ services:
       - "5000:5000"
       # port of the wireguard server
       - "51820:51820/udp"
-    networks:
-      - my_shared_network
+    network_mode: host
 
   wireguard-ui:
     image: ngoduykhanh/wireguard-ui:latest
@@ -32,7 +31,3 @@ services:
     volumes:
       - /data/docker/wireguard-ui/db:/app/db
       - /data/docker/wireguard-ui/config:/etc/wireguard
-
-networks:
-  my_shared_network:
-    external: true
