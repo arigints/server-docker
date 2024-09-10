@@ -2,7 +2,7 @@ services:
   yourls:
     image: guessi/docker-yourls:1.9.2-theme
     env_file:
-      - env.yourls
+      - .env
     ports:
       - 80:80
     volumes:
