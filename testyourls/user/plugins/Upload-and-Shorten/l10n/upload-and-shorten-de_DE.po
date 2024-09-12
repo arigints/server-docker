@@ -1,0 +1,125 @@
+# Fredl <fredl99@users.noreply.github.com>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: upload_and_shorten\n"
+"POT-Creation-Date: 2016-10-16 18:05+0100\n"
+"PO-Revision-Date: 2016-11-19 18:42+0200\n"
+"Last-Translator: Fredl <fredl99@users.noreply.github.com>\n"
+"Language-Team: I´m a team by myself :-)\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Poedit-KeywordsList: _;my_say__;gettext;gettext_noop;yourls__;yourls_e;your"
+"ls_s;yourls_se;yourls_esc_attr__;yourls_esc_html__;yourls_x;yourls_ex;yourls_"
+"esc_attr_x;yourls_esc_html_x;yourls_n:1,2;yourls_nx:1,2;yourls_n_noop:1,2;you"
+"rls_nx_noop:1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../plugin.php:40
+msgid "Send a file to your webserver and create a short-URL for it."
+msgstr "Lade eine Datei auf deinen Webserver und erzeuge eine kurz-URL dafür."
+
+#: ../plugin.php:46
+msgid "Select a file "
+msgstr "Datei auswählen "
+
+#: ../plugin.php:52
+msgid "YOURLS database options"
+msgstr "YOURLS Datenbank-Optionen"
+
+#: ../plugin.php:54
+msgid "Custom shortname: "
+msgstr "Benutzerdefinierter Kurzname: "
+
+#: ../plugin.php:57
+msgid "Custom title: "
+msgstr "Benutzerdefinierter Titel: "
+
+#: ../plugin.php:63
+msgid "Filename conversions (optional)"
+msgstr "Dateinamen ändern (optional)"
+
+#: ../plugin.php:66
+msgid "No conversion "
+msgstr "Keine Änderung "
+
+#: ../plugin.php:67
+msgid "Filename will not be changed at all."
+msgstr "Dateinamen nicht ändern."
+
+#: ../plugin.php:71
+msgid "Browser-safe filename "
+msgstr "Browser-sicherer Dateiname "
+
+#: ../plugin.php:72
+msgid "Recommended if the file should be accessed by web-browsers."
+msgstr "Empfohlen wenn die Datei für Web-Browser zugänglich sein soll."
+
+#: ../plugin.php:76
+msgid "Randomize filename "
+msgstr "Zufälliger Dateiname "
+
+#: ../plugin.php:77
+msgid ""
+"Browser-safe filenames with a slight protection against systematic crawling "
+"your web-directory."
+msgstr ""
+"Browser-sicherer Dateiname mit etwas Schutz gegen systematisches Ausspähen "
+"deines Web-Verzeichnisses."
+
+#: ../plugin.php:81
+msgid "Drop extension "
+msgstr "Erweiterung entfernen "
+
+#: ../plugin.php:82
+msgid "Hide the filetype. Can be combined with above options."
+msgstr "Dateityp verschleiern. Kann mit obigen Optionen kombiniert werden."
+
+#: ../plugin.php:84
+msgid ""
+"Some webservers won't send correct headers and web-browsers may not handle "
+"the file correctly."
+msgstr ""
+"Manche Web-Server senden dann keine korrekten Header und Web-Browser können "
+"die Datei eventuell nicht richtig darstellen."
+
+#: ../plugin.php:90
+msgid "  Go!  "
+msgstr "  Los!  "
+
+#: ../plugin.php:100
+msgid "This plugin is hosted at "
+msgstr "Dieses Plugin wird gehostet bei "
+
+#: ../plugin.php:101
+msgid "If you like it, remember someone spends his time working on it. "
+msgstr "Wenn es dir gefällt, denk daran, dass jemand seine Zeit dafür hergibt. "
+
+#: ../plugin.php:102
+msgid "A cup of coffee might stimulate further improvements. ;-) "
+msgstr "Eine Tasse Kaffee könnte zu weiteren Verbesserungen beitragen. ;-) "
+
+#: ../plugin.php:113
+msgid "You need to select a file to upload."
+msgstr "Du musst eine Datei zum Hochladen auswählen."
+
+#: ../plugin.php:203
+msgid " successfully sent. These are the links to your file:"
+msgstr " erfolgreich hochgeladen. Das sind die Links zu deiner Datei:"
+
+#: ../plugin.php:204
+msgid "Direct: "
+msgstr "Direkt: "
+
+#: ../plugin.php:205
+msgid "Short:  "
+msgstr "Kurz-URL:  "
+
+#: ../plugin.php:208
+msgid "Upload failed, sorry! The error was "
+msgstr "Hochladen fehlgeschlagen, tut mir leid! Die Fehlermeldung war: "
