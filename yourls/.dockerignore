@@ -1,9 +1,0 @@
-docker-compose.yaml
-volumes
-*.md
-*.sh
-.env
-env.*
-.git
-.git*
-.DS_Store

@@ -1,7 +1,7 @@
 services:
   linkstack:
     hostname: 'linkstack'
-    image: 'linkstackorg/linkstack:amd64'
+    image: 'linkstackorg/linkstack'
     environment:
       TZ: 'Asia/Jakarta'
       SERVER_ADMIN: 'gintingari73@gmail.com'
@@ -11,7 +11,7 @@ services:
       PHP_MEMORY_LIMIT: '256M'
       UPLOAD_MAX_FILESIZE: '8M'
     volumes:
-      - /data/docker/linkstack:/htdocs
+      - linkstack:/htdocs
     ports:
       - '8002:80'
       - '8081:443'
@@ -23,3 +23,6 @@ services:
 networks:
   my_shared_network:
     external: true
+
+volumes:
+  linkstack:
