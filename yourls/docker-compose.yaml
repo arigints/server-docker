@@ -1,0 +1,32 @@
+services:
+  yourls:
+    image: guessi/docker-yourls:1.9.2-theme
+    user: root
+    env_file:
+      - .env
+    ports:
+      - 8020:80
+    logging:
+      driver: json-file
+      options:
+        max-size: 20m
+        max-file: "30"
+    volumes:
+      - ./conf/opt/yourls/.htaccess:/conf/opt/yourls/.htaccess
+      
+      # for sleeky-backend
+      - ./conf/frontend:/opt/yourls/frontend
+      - ./conf/index.php:/opt/yourls/index.php
+
+      # all plugins
+      - ./conf/opt/yourls/user/plugins/access-control-allow-origin:/opt/yourls/user/plugins/access-control-allow-origin
+      - ./conf/opt/yourls/user/plugins/change-error-messages:/opt/yourls/user/plugins/change-error-messages
+      - ./conf/opt/yourls/user/plugins/limit-custom-keyword-length:/opt/yourls/user/plugins/limit-custom-keyword-length
+      - ./conf/opt/yourls/user/plugins/notifier:/opt/yourls/user/plugins/notifier
+      - ./conf/opt/yourls/user/plugins/password-protection:/opt/yourls/user/plugins/password-protection
+      - ./conf/opt/yourls/user/plugins/phpqrcode:/opt/yourls/user/plugins/phpqrcode
+      - ./conf/opt/yourls/user/plugins/preview-urls:/opt/yourls/user/plugins/preview-urls
+      - ./conf/opt/yourls/user/plugins/qr-code:/opt/yourls/user/plugins/qr-code
+      - ./conf/opt/yourls/user/plugins/reCaptcha:/opt/yourls/user/plugins/reCaptcha
+      - ./conf/opt/yourls/user/plugins/testqr:/opt/yourls/user/plugins/testqr
+      - ./conf/opt/yourls/user/plugins/Upload-and-Shorten:/opt/yourls/user/plugins/Upload-and-Shorten

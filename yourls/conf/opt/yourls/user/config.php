@@ -89,8 +89,3 @@ $yourls_reserved_URL = [
 /*
  ** Personal settings would go after here.
  */
-# Paths for plugin: "Upload-and-Shorten":
-# The web URL path where YOURLS short-links will redirect to:
-define( 'SHARE_URL', 'https://s.arigints.my.id/files/' );
-# The physical path where the plugin drops your files into:
-define( 'SHARE_DIR', '/files/' );

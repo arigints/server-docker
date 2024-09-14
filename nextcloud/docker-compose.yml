@@ -16,9 +16,6 @@ services:
     volumes:
       - /data/docker/nextcloud/config:/var/www/html/config
       - /data/docker/nextcloud/data:/var/www/html/data
-    environment:
-      - MYSQL_HOST=10.10.10.11:3306
-      - REDIS_HOST_PASSWORD=123
     env_file:
       - .env
     depends_on:
