@@ -30,3 +30,9 @@ services:
       - ./conf/opt/yourls/user/plugins/reCaptcha:/opt/yourls/user/plugins/reCaptcha
       - ./conf/opt/yourls/user/plugins/testqr:/opt/yourls/user/plugins/testqr
       - ./conf/opt/yourls/user/plugins/Upload-and-Shorten:/opt/yourls/user/plugins/Upload-and-Shorten
+    networks:
+      - my_shared_network
+
+networks:
+  my_shared_network:
+    external: true
