@@ -1,6 +1,7 @@
 services:
   yourls:
     image: guessi/docker-yourls:1.9.2-theme
+    restart: always
     user: root
     env_file:
       - .env
