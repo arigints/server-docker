@@ -15,7 +15,7 @@ services:
     ports:
       - '8002:80'
       - '8081:443'
-    restart: unless-stopped
+    restart: always
     user: root
     networks:
       - my_shared_network
