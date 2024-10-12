@@ -10,6 +10,7 @@ services:
       - /data/docker/minio:/data
     networks:
       - my_shared_network
+    command: server /data --console-address ":9001"
 
 networks:
   my_shared_network:
