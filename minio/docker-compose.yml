@@ -1,0 +1,16 @@
+services:
+  minio:
+    image: quay.io/minio/minio
+    env_file:
+      - .env
+    ports:
+      - 9000:9000
+      - 9001:9001
+    volumes:
+      - /data/docker/minio:/data
+    networks:
+      - my_shared_network
+
+networks:
+  my_shared_network:
+    external: true
