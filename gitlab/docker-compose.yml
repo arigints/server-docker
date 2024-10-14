@@ -1,0 +1,34 @@
+services:
+  gitlab:
+    image: 'gitlab/gitlab-ce:latest'
+    restart: always
+    hostname: 'git.arigints.my.id'
+    container_name: gitlab-ce
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'https://git.arigints.my.id'
+    ports:
+      - '8080:80'
+      - '8443:443'
+    volumes:
+      - '/data/docker/gitlab/config:/etc/gitlab'
+      - '/data/docker/gitlab/logs:/var/log/gitlab'
+      - '/data/docker/gitlab/data:/var/opt/gitlab'
+    networks:
+      - my_shared_network
+
+  gitlab-runner:
+    image: gitlab/gitlab-runner:alpine
+    container_name: gitlab-runner    
+    restart: always
+    depends_on:
+      - gitlab
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /data/docker/gitlab-runner:/etc/gitlab-runner'
+    networks:
+      - my_shared_network
+
+networks:
+  my_shared_network:
+    external: true
