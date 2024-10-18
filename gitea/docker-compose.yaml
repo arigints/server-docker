@@ -1,5 +1,5 @@
 services:
-  server:
+  gitea:
     image: gitea/gitea:1.22.3
     container_name: gitea
     env_file:
