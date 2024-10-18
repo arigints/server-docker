@@ -1,0 +1,20 @@
+services:
+  server:
+    image: gitea/gitea:1.22.3
+    container_name: gitea
+    env_file:
+      - .env
+    restart: always
+    volumes:
+      - /data/docker/gitea:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "3000:3000"
+      - "222:22"
+    networks:
+      - my_shared_network
+
+networks:
+  my_shared_network:
+    external: true
