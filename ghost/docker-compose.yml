@@ -1,0 +1,16 @@
+services:
+  ghost:
+    image: ghost:alpine
+    restart: always
+    ports:
+      - "8005:2368"
+    env_file:
+      - .env
+    volumes:
+      - /data/docker/ghost:/var/lib/ghost/content
+    networks:
+      - my_shared_network
+
+networks:
+  my_shared_network:
+    external: true
